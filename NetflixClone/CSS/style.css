@@ -1,0 +1,146 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Fredoka', sans-serif;
+}
+.disclaimer{
+    display:none;
+}
+.container{
+	max-width: 1400px;
+	height: 800px;
+	overflow: hidden;
+	position: relative;
+	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.container > img{
+	filter: grayscale(15%);
+}
+.navbar{
+	display: flex;
+}
+.netflix_logo{
+	position: absolute;
+	top: 40px;
+	text-shadow: 2px 3px 3px white;
+	left: 30px;
+}
+svg{
+	fill: #e50914;
+}
+.outer_form > form > h1{
+	color: white;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+.outer_form{
+	color: #8c8c8c;
+	background: rgba(0,0,0,.75);
+	height: 330px;
+	padding: 70px;
+	width: 270px;
+	box-shadow: inset 2px 1px 20px 5px black;
+	position: absolute;
+	top: 50px;
+	transform: translate(450px);
+}
+.outer_form > form {
+	width: 100%;
+	max-width: 270px;
+}
+.outer_form > form > input{
+	padding: 10px;
+	margin-top: 10px;
+	background: #333;
+	outline: none;
+	border: none;
+	border-radius: 2px;
+	color: white;
+	width: 90%;
+}
+.outer_form > input[type="checkbox"]{
+	background: #333;
+}
+.remember-me{
+	font-size: small;
+}
+.help-label{
+	margin-left: 80px;
+	font-size: small;
+}
+button{
+	background: #e50914;
+	padding: 10px;
+	color: #fff;
+	cursor: pointer;
+	margin-top: 25px;
+	width: 97%;
+	border-radius: 2px;
+	outline: none;
+	border: none;
+}
+.outer_form > form > input::placeholder{
+	color: white;
+}
+.facebook-login{
+	margin-top: 40px;
+	cursor: pointer;
+	font-size: small;
+}
+.facebook-login > img{
+	width: 15px;
+}
+sup{
+	margin-left: 3px;
+}
+div.signup-label{
+	margin-top: 5px;
+	font-family: sans-serif;
+	font-size: 13px;
+}
+div.signup-label > a{
+	color: whitesmoke;
+	text-decoration: none;
+}
+@media (min-width:300px ) and (max-width: 991px){
+	body{
+		background: black;
+	}
+	.container{
+		width: 100%;
+		max-width: 800px;
+	}
+	.container > img{
+		display: none;
+	}
+	.outer_form{
+		transform: translate(-50px,30px);
+		width: 100%;
+		background: transparent;
+		max-width: 350px;
+	}
+	.outer_form > form {
+		max-width: 350px;
+	}
+	.outer_form > form > input{
+		width: 100%;
+		height: 2rem;
+	}
+	button{
+		width: 105%;
+		padding: 12px;
+	}
+	.help-label{
+		margin-left: 160px;
+	}
+	.facebook-login > img{
+		width: 20px;
+	}
+	.facebook-login{
+		font-size: large;
+	}
+	div.signup-label{
+		font-size: normal;
+	}
+}
