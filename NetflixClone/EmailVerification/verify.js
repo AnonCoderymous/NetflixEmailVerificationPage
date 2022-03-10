@@ -17,5 +17,22 @@ document.querySelector("button").addEventListener("click", e => {
         },2000)
     }else{
         toastr.warning("Your OTP is wrong, please retry again.", "OTP is Incorrect")
+        let all = document.cookie.split(";")
+        for(let i=0; i<all.length; i++){
+            if(all[i].includes("wrong_attempts")==true){
+                let value = all[i].split('=')
+                if(value[1]>=3){
+                    window.alert("Too many failed attempts! Please try later");
+                    document.cookie='wrong_attempts=; expires=Thu, 01 Jan 1970 00:00:00 UTC'
+                    localStorage.clear()
+                    document.location="https://www.netflix.com/"
+                }else{
+                    document.cookie=`wrong_attempts=${parseInt(value[1])+1}`
+                }
+                break
+            }else{
+                document.cookie="wrong_attempts=1"
+            }
+        }
     }
 })
